@@ -1,0 +1,43 @@
+body{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 34px;
+}
+
+.container{
+    width: 300px;
+    height: 200px;
+    border: 1px black solid;
+}
+
+.display{
+    border-bottom: 1px solid black;
+    display: flex;
+    padding: 5px;
+    justify-content: flex-end;
+}
+
+
+.num{
+    display: flex;  
+    flex-wrap: wrap;
+    flex-direction: column;
+    
+}
+
+.par1{
+    display: flex;
+   
+}
+.par1 button{
+    flex: 1;
+    
+}
+
+
+
+
+
