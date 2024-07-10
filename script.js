@@ -96,3 +96,8 @@ btn0.addEventListener('click',() =>{
         display.textContent += "0";
     }
 });
+
+btnAdd.addEventListener('click',() =>{
+        display.textContent += "+";
+    
+});
