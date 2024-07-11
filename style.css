@@ -16,6 +16,7 @@ body{
 .display{
     border-bottom: 1px solid black;
     display: flex;
+    height: 35px;
     padding: 5px;
     justify-content: flex-end;
 }
