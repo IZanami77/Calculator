@@ -15,6 +15,9 @@ const btn0 = document.querySelector("#btn0");
 const btnDivide = document.querySelector("#divide");
 const btnEqual = document.querySelector("#equal");
 const btnAc = document.querySelector("#ac");
+const btnDot = document.querySelector("#dot");
+const btnDe = document.querySelector("#de");
+const btnPL = document.querySelector("#plusless");
 
 
 num1 = "";
@@ -24,28 +27,28 @@ result = ""
 
 btnAdd.addEventListener('click',() =>{
     num1 = display.textContent;
-    num1 = parseInt(num1);
+    num1 = parseFloat(num1);
     display.textContent = "";
     element = "+";
 })
 
 btnSubs.addEventListener('click',() =>{
     num1 = display.textContent;
-    num1 = parseInt(num1);
+    num1 = parseFloat(num1);
     display.textContent = "";
     element = "-";
 })
 
 btnPlus.addEventListener('click',() =>{
     num1 = display.textContent;
-    num1 = parseInt(num1);
+    num1 = parseFloat(num1);
     display.textContent = "";
     element = "*";
 })
 btnDivide.addEventListener('click',() =>{
 
     num1 = display.textContent;
-    num1 = parseInt(num1);
+    num1 = parseFloat(num1);
     display.textContent = "";
     element = "÷";
 })
@@ -55,26 +58,49 @@ btnAc.addEventListener('click',()=>{
     num1 = "";
     num2 = "";
     element = "";
+    digit = "";
 
 })
 
+btnDot.addEventListener('click',()=>{
+    if(display.textContent == "0"){
+        display.textContent = ".";
+    }else if(display.textContent.includes(("."))){
+        display.textContent += '';
+    }else{
+    display.textContent += ".";
+    }
+})
+
+btnPL.addEventListener('click',()=>{
+    if(display.textContent == "0"){
+            display.textContent = "-";
+            
+    }else if(display.textContent == "-" + digit){
+        display.textContent = digit;
+    }else{
+        display.textContent = "-" + digit;
+    }
+})
+
+
+
 btnEqual.addEventListener('click',()=>{
     num2 = display.textContent;
-    num2 = parseInt(num2);
-    console.log(num2);
+    num2 = parseFloat(num2);
 
     switch (element) {
         case '+':
             result = num1 + num2;
-            display.textContent = result
+            display.textContent = result;
             break;
         case '-':
             result = num1 - num2;
-            display.textContent = result
+            display.textContent = result;
             break;
         case '*':
             result = num1 * num2;
-            display.textContent = result
+            display.textContent = result;
             break;
 
         case '÷':
@@ -82,7 +108,8 @@ btnEqual.addEventListener('click',()=>{
                 alert("Cannot divide by zero dude")
             }else{
             result = num1 / num2;
-            display.textContent = result
+            display.textContent = result.toFixed(3);
+            
             }
             break;
     
@@ -94,77 +121,77 @@ btnEqual.addEventListener('click',()=>{
 const OPERATORS = ['+','-','*','÷'];
 
 btn1.addEventListener('click',() =>{
-    if(display.textContent == "0" || OPERATORS.some(op => display.textContent.includes(op)) ){
-        display.textContent = "1";
+    if(display.textContent == "0"){
+     digit = display.textContent = "1";
     }else{
-    display.textContent += "1";
+     digit = display.textContent += "1";
     }
 });
 
 btn2.addEventListener('click',() =>{
-    if(display.textContent == "0" || OPERATORS.some(op => display.textContent.includes(op))){
-        display.textContent = "2";
+    if(display.textContent == "0"){
+        digit = display.textContent = "2";
     }else{
-    display.textContent += "2";
+    digit = display.textContent += "2";
     }
 });
 
 btn3.addEventListener('click',() =>{
-    if(display.textContent == "0" || OPERATORS.some(op => display.textContent.includes(op))){
-        display.textContent = "3";
+    if(display.textContent == "0"){
+        digit = display.textContent = "3";
     }else{
-    display.textContent += "3";
+        digit = display.textContent += "3";
     }
 });
 
 btn4.addEventListener('click',() =>{
-    if(display.textContent == "0" || OPERATORS.some(op => display.textContent.includes(op))){
-        display.textContent = "4";
+    if(display.textContent == "0"){
+        digit = display.textContent = "4";
     }else{
-    display.textContent += "4";
+        digit = display.textContent += "4";
     }
 });
 
 btn5.addEventListener('click',() =>{
-    if(display.textContent == "0" || OPERATORS.some(op => display.textContent.includes(op))){
-        display.textContent = "5";
+    if(display.textContent == "0"){
+        digit = display.textContent = "5";
     }else{
-    display.textContent += "5";
+        digit = display.textContent += "5";
     }
 });
 btn6.addEventListener('click',() =>{
-    if(display.textContent == "0" || OPERATORS.some(op => display.textContent.includes(op))){
-        display.textContent = "6";
+    if(display.textContent == "0"){
+        digit = display.textContent = "6";
     }else{
-    display.textContent += "6";
+        digit = display.textContent += "6";
     }
 });
 
 btn7.addEventListener('click',() =>{
-    if(display.textContent == "0" || OPERATORS.some(op => display.textContent.includes(op))){
-        display.textContent = "7";
+    if(display.textContent == "0"){
+        digit = display.textContent = "7";
     }else{
-    display.textContent += "7";
+        digit = display.textContent += "7";
     }
 });
 btn8.addEventListener('click',() =>{
-    if(display.textContent == "0" || OPERATORS.some(op => display.textContent.includes(op))){
-        display.textContent = "8";
+    if(display.textContent == "0"){
+        digit = display.textContent = "8";
     }else{
-    display.textContent += "8";
+        digit = display.textContent += "8";
     }
 })
 
 btn9.addEventListener('click',() =>{
-    if(display.textContent == "0" || OPERATORS.some(op => display.textContent.includes(op))){
-        display.textContent = "9";
+    if(display.textContent == "0"){
+        digit = display.textContent = "9";
     }else{
-    display.textContent += "9";
+        digit = display.textContent += "9";
     }
 });
 
 btn0.addEventListener('click',() =>{
-    if(display.textContent != "0" || OPERATORS.some(op => display.textContent.includes(op))){
+    if(display.textContent != "0"){
         display.textContent += "0";
     }
 });

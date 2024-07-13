@@ -8,33 +8,49 @@ body{
 }
 
 .container{
-    width: 300px;
-    height: 200px;
-    border: 1px black solid;
+    width: 400px;
+    border: 4px black solid;
+    height: 100%;
 }
 
-.display{
-    border-bottom: 1px solid black;
+.buttons{
     display: flex;
-    height: 35px;
-    padding: 5px;
-    justify-content: flex-end;
-}
-
-
-.num{
-    display: flex;  
     flex-wrap: wrap;
     flex-direction: column;
+}
+.display{
+    display: flex;
+    justify-content: flex-end;
+    padding-right: 8px;
+    height: 50px;
+    background-color: #7c7b6c;
+    font-size: 40px;
+    color: white;
 }
 
 .par1{
     display: flex;
-   
 }
 .par1 button{
     flex: 1;
     
+}
+#plus,#add,#subs{
+    flex: 1.58;
+}
+
+.number{
+    background-color: #3e3e53  ;
+    border: 0.5px solid #bab986;
+    color: aliceblue;
+    font-size: 40px;
+}
+
+.function{
+    background-color: #000039;
+    border: 0.5px #bab986 solid;
+    color: aliceblue;
+    font-size: 40px;
 }
 
 
